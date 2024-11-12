@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.head{
+    text-align: center;
+    color:green;
+    margin: 10px;
+}
+.input{
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 26px;
+    padding: 5px;
+}
+.box{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    box-shadow: 0 3px 3px 0 gray;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:: space-around;
+}
+.btn{
+    font-weight: bold;
+    background-color: antiquewhite;
+    height: 70px;
+    width: 18%;
+    border: 1px solid gray;
+    font-size: 20px;
+    color: rgb(36, 20, 20);
+    border-radius: 50%;
+    margin: 2px;
+}
+.btn:hover{
+    background-color: rgb(241, 193, 130);
+}
+    </style>
+    
+</head>
+<body>
+    <h1 class="head">Calculator</h1>
+    <div class="box">
+        <input type="text" placeholder="0" class="input" id="display" name="display"><br>
+        <div class="row1">
+            <button class="btn"  onclick = "dltAll()">AC</button>
+            <button class="btn" onclick= "dlt()">Del</button>
+            <button class="btn" onclick = "square()">X<sup>2</sup></button>
+            <button class="btn" onclick = "input('/')">/</button>
+        </div>
+        <div class="row2">
+            <button class="btn" onclick = "input('7')">7</button>
+            <button class="btn" onclick = "input('8')">8</button>
+            <button class="btn" onclick = "input('9')">9</button>
+            <button class="btn" onclick = "input('*')">X</button>
+        </div>
+        <div class="row3">
+            <button class="btn" onclick = "input('4')">4</button>
+            <button class="btn" onclick = "input('5')">5</button>
+            <button class="btn" onclick = "input('6')">6</button>
+            <button class="btn" onclick = "input('-')">-</button>
+        </div>
+        <div class="row4">
+            <button class="btn" onclick = "input('1')">1</button>
+            <button class="btn" onclick = "input('2')">2</button>
+            <button class="btn" onclick = "input('3')">3</button>
+            <button class="btn" onclick = "input('+')">+</button>
+        </div>
+        <div class="row5">
+            <button class="btn" onclick = "input('0')">0</button>
+            <button class="btn" onclick = "input('00')">00</button>
+            <button class="btn" onclick = "input('.')">.</button>
+            <button class="btn"  onclick = "equal()" style="background-color: rgb(71, 61, 61); color:white;">=</button>
+        </div>
+
+    </div>
+
+    <script>
+        let dis = document.getElementById ("display");
+
+      function input(num){
+       dis.value += num;
+      }
+        
+      function square(){
+        display.value = display.value*display.value;
+      }
+      function dltAll(){
+        display.value = "";
+      }
+
+      function dlt(){
+        display.value = display.value.slice(0, -1);
+      }
+
+      function equal(){
+        display.value = eval(display.value);
+      }
+
+
+    </script>
+</body>
+</html>
+lue);
+      }
+
+
+    </script>
+</body>
+</html>
+eval(display.value);
+      }
+
+
+    </script>
+</body>
+</html>
